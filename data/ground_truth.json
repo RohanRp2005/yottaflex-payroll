@@ -1,0 +1,53 @@
+{
+  "description": "Ground truth - DO NOT load in validate_payroll.py",
+  "seed": 20261022,
+  "anomalies": [
+    {
+      "anomaly_id": "ANO-001",
+      "type": "HoursExceedPeriodMaximum",
+      "employee_id": "EMP-000042",
+      "period_id": "PP-2026-01",
+      "entity_id": "TIME-0192001-20260130",
+      "injected_hours": 49.5,
+      "total_hours_after": 204.0,
+      "description": "EMP-000042 has 204.0 approved hrs in PP-2026-01 (max 184)"
+    },
+    {
+      "anomaly_id": "ANO-002",
+      "type": "DuplicateAllowance",
+      "employee_id": "EMP-000137",
+      "period_id": "PP-2026-02",
+      "entity_id": "ALW-0017860",
+      "original_id": "ALW-0006233",
+      "allowance_type": "Communication",
+      "amount": 1955.3,
+      "description": "ALW-0006233 duplicated as ALW-0017860 for EMP-000137 in PP-2026-02"
+    },
+    {
+      "anomaly_id": "ANO-003",
+      "type": "LeaveDeductionAppliedTwice",
+      "employee_id": "EMP-000256",
+      "entity_id": "LVE-0001801",
+      "description": "LVE-0001801 for EMP-000256 has deduction_applied_count=2 (must be 1)"
+    },
+    {
+      "anomaly_id": "ANO-004",
+      "type": "UnapprovedTimeInExport",
+      "employee_id": "EMP-000501",
+      "period_id": "PP-2026-03",
+      "entity_id": "TIME-0137001-20260302",
+      "description": "TIME-0137001-20260302 is Pending but has approved_by set (ready for export)"
+    },
+    {
+      "anomaly_id": "ANO-005",
+      "type": "PayrollReconciliationFailure",
+      "employee_id": "EMP-000888",
+      "period_id": "PP-2026-02",
+      "entity_id": "EMP-000888_PP-2026-02",
+      "correct_net_pay": 4016.32,
+      "recorded_net_pay": 5016.31,
+      "delta": 999.99,
+      "description": "EMP-000888/PP-2026-02: net_pay=4016.32 but recorded=5016.31"
+    }
+  ]
+}

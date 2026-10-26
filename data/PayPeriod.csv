@@ -1,0 +1,4 @@
+period_id,period_start,period_end,working_days,max_regular_hours,status
+PP-2026-01,2026-01-01,2026-01-31,22,184,Closed
+PP-2026-02,2026-02-01,2026-02-28,20,184,Closed
+PP-2026-03,2026-03-01,2026-03-31,22,184,Closed
